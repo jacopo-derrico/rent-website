@@ -2,5 +2,6 @@
     <div>
         <HomeHero />
         <HomeComments />
+        <HomeJourney />
     </div>
 </template>
