@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-between items-center lg:w-5/6 mx-auto py-5 bg-white">
+    <div class="flex justify-between items-center lg:w-5/6 mx-auto py-5 bg-white z-50">
         <div>
             <NuxtLink to="/">
                 <AppLogo class="w-[100px]"/>
