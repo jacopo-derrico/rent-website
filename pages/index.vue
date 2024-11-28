@@ -3,5 +3,6 @@
         <HomeHero />
         <HomeComments />
         <HomeJourney />
+        <HomeForm />
     </div>
 </template>
