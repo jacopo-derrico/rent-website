@@ -4,6 +4,22 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss',
-    '@element-plus/nuxt'
-  ]
+    '@element-plus/nuxt',
+    'nuxt-mail'
+  ],
+  runtimeConfig: {
+      mail: {
+        message: {
+          to: 'info@omnirent.io',
+        },
+        smtp: {
+          host: "smtps.aruba.it",
+          port: 465,
+          auth: {
+            user: process.env.NUXT_EMAIL_USERNAME,
+            pass: process.env.NUXT_EMAIL_PASSWORD,
+          },
+        }
+      },
+  },
 })
