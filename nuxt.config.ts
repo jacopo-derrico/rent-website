@@ -5,7 +5,8 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@element-plus/nuxt',
-    'nuxt-mail'
+    'nuxt-mail',
+    '@vee-validate/nuxt'
   ],
   runtimeConfig: {
       mail: {
