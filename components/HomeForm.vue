@@ -67,7 +67,7 @@
             <div class="w-full text-center">
                 <button :disabled="!meta.valid"
                     :class="{'cursor-not-allowed bg-slate-300': !meta.valid, 'hover:bg-[#FFC436] hover:text-black': meta.valid}"
-                    class="text-white bg-[#0174BE] py-3 px-5 rounded-xl">Join
+                    class="text-white bg-[#0174BE] py-3 px-14 rounded-xl">Join
                     the journey</button>
             </div>
             <!-- Success message -->
