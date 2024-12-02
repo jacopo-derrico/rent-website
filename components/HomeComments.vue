@@ -7,7 +7,7 @@
             </h2>
         </div>
         <div id="comments" class="w-2/3 ps-14">
-            <el-carousel direction="vertical" type="card" :autoplay="true" trigger="click" cardScale="1">
+            <el-carousel direction="vertical" type="card" :autoplay="true" trigger="click">
                 <el-carousel-item v-for="slide in list" :key="slide.title" class="flex items-center pe-14">
                     <div class="left-borders rounded-s-md"></div>
                     <div class="flex w-full h-full items-center border-2 border-s-0 pe-4 rounded-r-md border-slate-200 bg-white">

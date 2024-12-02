@@ -4,7 +4,7 @@
         <p class="text-center text-lg px-20 mb-6">Be part of a community-driven startup. Your voice matters—help shape
             the app
             everyone wants!</p>
-        <form action="POST" novalidate>
+        <form action="POST" novalidate @submit="onSubmit">
             <div class="flex mb-8">
                 <div class="w-1/2 lg:pe-2">
                     <input class="rounded-lg border-2 ps-2 py-2 w-full" v-model="name" v-bind="nameAttrs" type="text"
@@ -41,9 +41,9 @@
                 <div class="w-1/2 lg:ps-2">
                     <input class="rounded-lg border-2 ps-2 py-2 w-full" v-model="country" v-bind="countryAttrs"
                         type="text" name="country" placeholder="Country *" required>
-                        <p v-if="errors.country && meta.touched" class="mt-2 text-pink-600 text-sm">
-                            {{ errors.country }}
-                        </p>
+                    <p v-if="errors.country && meta.touched" class="mt-2 text-pink-600 text-sm">
+                        {{ errors.country }}
+                    </p>
                 </div>
             </div>
             <div class="mb-8">
@@ -59,22 +59,23 @@
                 </p>
             </div>
             <div class="mb-8">
-                <textarea class="rounded-lg border-2 ps-2 py-2 w-full" name="suggestions" id="suggestions" rows="10"
-                    placeholder="Do you have any ideas or suggestions for the service? (Optional) 
+                <textarea class="rounded-lg border-2 ps-2 py-2 w-full" v-model="message" v-bind="messageAttrs"
+                    name="suggestions" id="suggestions" rows="10" placeholder="Do you have any ideas or suggestions for the service? (Optional) 
 (E.g., features you’d like to see, how you’d like the app to work, or things you dislike in an app)"></textarea>
             </div>
+            <!-- Button is disabled until alla fields are validated -->
             <div class="w-full text-center">
-                <button @click.prevent="sendMail"
-                    class="text-white bg-[#0174BE] hover:bg-[#FFC436] hover:text-black py-3 px-5 rounded-xl">Join
+                <button :disabled="!meta.valid"
+                    :class="{'cursor-not-allowed bg-slate-300': !meta.valid, 'hover:bg-[#FFC436] hover:text-black': meta.valid}"
+                    class="text-white bg-[#0174BE] py-3 px-5 rounded-xl">Join
                     the journey</button>
             </div>
-            <div class="p-6 mt-10 bg-green-200 border-green-500 border-2 text-green-500 text-center">
+            <!-- Success message -->
+            <div :class="{'block': messageSent, 'hidden': !messageSent}" class="p-6 mt-10 bg-green-200 border-green-500 border-2 text-green-500 text-center">
                 <h6 class="text-lg font-medium">Message sent correctly</h6>
                 <p>Now Join Our Community and shape the future of vehicle mobility, links below</p>
             </div>
         </form>
-        <pre>values: {{ values }}</pre>
-        <pre>errors: {{ errors }}</pre>
     </div>
 </template>
 
@@ -92,14 +93,16 @@
     import { toTypedSchema } from '@vee-validate/yup';
     import * as yup from 'yup';
 
-    const { values, errors, meta, defineField } = useForm({
+    // vee-validate form validation
+    const { values, errors, meta, defineField, handleSubmit } = useForm({
         validationSchema: yup.object({
             email: yup.string().email().required(),
             name: yup.string().min(2).required(),
             lastName: yup.string().min(2).required(),
             city: yup.string().required(),
             country: yup.string().required(),
-            appUse: yup.string().required()
+            appUse: yup.string().required(),
+            message: yup.string()
         }),
     });
 
@@ -109,17 +112,40 @@
     const [city, cityAttrs] = defineField('city');
     const [country, countryAttrs] = defineField('country');
     const [appUse, appUseAttrs] = defineField('appUse');
+    const [message, messageAttrs] = defineField('message');
 
+    // handle submit after checking all field are valid
+    const onSubmit = handleSubmit((values, { resetForm }) => {
+        sendMail();
+        resetForm();
+        messageSent = true
+    });
+    
+    // mail sender
     const mail = useMail()
 
     function sendMail() {
-        if (!errors) {
             mail.send({
                 from: 'Omni Rent Website',
                 subject: 'New customer',
-                text: 'This is an incredible test message',
+                text: `
+                    First name: ${values.name}
+                    Last name: ${values.lastName}
+                    Email: ${values.email}
+                    City: ${values.city}
+                    Country: ${values.country}
+                    App usage: ${values.appUse}
+                    Message: ${values.message || 'No messages'}
+                `,
             })
-            console.log('sent')
-        }
+            console.log('Message sent successfully!')
     }
+
+    // success message
+    let messageSent = ref(false)
+
+    onUnmounted(() => {
+        messageSent = false
+    })
+
 </script>
