@@ -41,10 +41,10 @@
                 <div class="w-1/2 lg:ps-2">
                     <input class="rounded-lg border-2 ps-2 py-2 w-full" v-model="country" v-bind="countryAttrs"
                         type="text" name="country" placeholder="Country *" required>
+                        <p v-if="errors.country && meta.touched" class="mt-2 text-pink-600 text-sm">
+                            {{ errors.country }}
+                        </p>
                 </div>
-                <p v-if="errors.country && meta.touched" class="mt-2 text-pink-600 text-sm">
-                    {{ errors.country }}
-                </p>
             </div>
             <div class="mb-8">
                 <Field class="rounded-lg border-2 px-2 h-[44px] w-full text-gray-400" as="select" v-model="appUse"
