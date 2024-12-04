@@ -12,7 +12,7 @@
                 </NuxtLink>
             </li>
             <li>
-                <NuxtLink class="linkAnimation" to="/">
+                <NuxtLink class="linkAnimation" to="/faq">
                     FAQ
                 </NuxtLink>
             </li>
