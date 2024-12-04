@@ -61,4 +61,7 @@
     .el-icon {
         margin-right: 2rem;
     }
+    .el-collapse .el-collapse-item:last-child .el-collapse-item__header{
+        border-bottom: 0px;
+    }
 </style>
