@@ -17,12 +17,12 @@
                 </NuxtLink>
             </li>
             <li>
-                <NuxtLink class="linkAnimation" to="/">
+                <NuxtLink class="linkAnimation" to="/meetTeam">
                     Team
                 </NuxtLink>
             </li>
             <li>
-                <NuxtLink class="bg-[#FFC436] hover:bg-[#0174BE] hover:text-white py-3 px-5 rounded-xl cursor-pointer" to="/">
+                <NuxtLink class="bg-[#FFC436] hover:bg-[#0174BE] hover:text-white py-3 px-5 rounded-xl cursor-pointer" to="/#contact-form">
                     Join as an Early adopter
                 </NuxtLink>
             </li>

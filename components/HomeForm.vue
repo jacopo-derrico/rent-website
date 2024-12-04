@@ -1,5 +1,5 @@
 <template>
-    <div class="w-2/3 mx-auto my-20">
+    <div id="contact-form" class="w-2/3 mx-auto my-20">
         <h6 class="text-3xl font-medium text-center mb-3">Become an Early Adopter</h6>
         <p class="text-center text-lg px-20 mb-6">Be part of a community-driven startup. Your voice matters—help shape
             the app
