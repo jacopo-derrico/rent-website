@@ -1,40 +1,42 @@
 <template>
-    <div class="flex justify-between items-center lg:w-5/6 mx-auto py-5 bg-white z-50">
-        <div>
-            <NuxtLink to="/">
-                <AppLogo class="w-[100px]"/>
-            </NuxtLink>
+    <div class="flex justify-between items-center bg-white z-50 fixed top-0 w-full">
+        <div class="flex justify-between items-center lg:w-5/6 py-5 mx-auto">
+            <div>
+                <NuxtLink to="/">
+                    <AppLogo class="w-[100px]" />
+                </NuxtLink>
+            </div>
+            <ul class="flex items-center gap-4">
+                <li>
+                    <NuxtLink class="linkAnimation" to="/">
+                        What we do
+                    </NuxtLink>
+                </li>
+                <li>
+                    <NuxtLink class="linkAnimation" to="/faq">
+                        FAQ
+                    </NuxtLink>
+                </li>
+                <li>
+                    <NuxtLink class="linkAnimation" to="/meetTeam">
+                        Team
+                    </NuxtLink>
+                </li>
+                <li>
+                    <NuxtLink
+                        class="bg-[#FFC436] hover:bg-[#0174BE] hover:text-white py-3 px-5 rounded-xl cursor-pointer"
+                        to="/#contact-form">
+                        Join as an Early adopter
+                    </NuxtLink>
+                </li>
+            </ul>
         </div>
-        <ul class="flex items-center gap-4">
-            <li>
-                <NuxtLink class="linkAnimation" to="/">
-                    What we do
-                </NuxtLink>
-            </li>
-            <li>
-                <NuxtLink class="linkAnimation" to="/faq">
-                    FAQ
-                </NuxtLink>
-            </li>
-            <li>
-                <NuxtLink class="linkAnimation" to="/meetTeam">
-                    Team
-                </NuxtLink>
-            </li>
-            <li>
-                <NuxtLink class="bg-[#FFC436] hover:bg-[#0174BE] hover:text-white py-3 px-5 rounded-xl cursor-pointer" to="/#contact-form">
-                    Join as an Early adopter
-                </NuxtLink>
-            </li>
-        </ul>
     </div>
 </template>
 
 <style>
     .linkAnimation {
         position: relative;
-        /* color: #FFF;
-        text-decoration: none; */
     }
 
     .linkAnimation:before {
