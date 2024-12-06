@@ -6,7 +6,9 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@element-plus/nuxt',
     'nuxt-mail',
-    '@vee-validate/nuxt'
+    '@vee-validate/nuxt',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
   ],
   runtimeConfig: {
       mail: {
@@ -23,4 +25,13 @@ export default defineNuxtConfig({
         }
       },
   },
+  site: { 
+    url: 'https://www.omnirent.io', 
+    name: 'My Awesome Website' 
+    },
+    robots: {
+      allow: [
+        '*'
+      ]
+    },
 })
