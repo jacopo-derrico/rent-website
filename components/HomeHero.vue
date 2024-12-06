@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="w-full h-full bg-[#0174BE] absolute rounded-2xl opacity-50"></div>
-            <img src="../assets/img/headlight.webp" alt="car light closeup">
+            <img class="w-full rounded-2xl" src="../assets/img/headlight.webp" alt="car light closeup">
         </figure>
         <div class="text-white text-center flex justify-center gap-3 lg:mt-[-50px]">
             <div class="z-20 bg-[#0174BE] px-14 py-8 rounded-lg flex flex-col items-center">
