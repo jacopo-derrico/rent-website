@@ -5,14 +5,14 @@
                 <h1 id="teamAnimation" class="text-center text-3xl font-semibold">
                     Meet our team
                 </h1>
-                <svg class="mx-auto my-5" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                <svg class="mx-auto my-5 blink" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
                     width="24px" fill="black">
                     <path d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z" />
                 </svg>
             </div>
         </div>
-        <div id="scrollStart" class="mb-20">
-            <div class="teamMember flex justify-end">
+        <div id="scrollStart" class="my-0 pt-32 h-screen">
+            <div class="teamMember1 flex justify-end mt-0">
                 <div class="relative w-fit me-[20%]">
                     <figure class="w-[200px] aspect-square bg-slate-200 rounded-2xl">
                         <img src="" alt="">
@@ -24,7 +24,7 @@
                     </div>
                 </div>
             </div>
-            <div class="teamMember">
+            <div class="teamMember2">
                 <div class="relative w-fit ms-[15%]">
                     <figure class="w-[200px] aspect-square bg-slate-200 rounded-2xl">
                         <img src="" alt="">
@@ -36,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            <div class="teamMember flex justify-end">
+            <div class="teamMember3 flex justify-end">
                 <div class="relative w-fit me-[23%]">
                     <figure class="w-[200px] aspect-square bg-slate-200 rounded-2xl">
                         <img src="" alt="">
@@ -48,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <div class="teamMember">
+            <div class="teamMember4">
                 <div class="relative w-fit ms-[10%]">
                     <figure class="w-[200px] aspect-square bg-slate-200 rounded-2xl">
                         <img src="" alt="">
@@ -60,9 +60,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="h-screen w-full bg-red-500">
-
         </div>
     </div>
 </template>
@@ -85,17 +82,44 @@
                     force3D: false,
                     scrollTrigger: {
                         trigger: "#scrollStart",
-                        start: "top center",
+                        start: "top top",
                         pin: "#scrollStart",
                         scrub: true,
                         markers: true,
-                        pinSpacing: false
+                        pinSpacing: true
                         // toggleActions: "restart none restart none"
                     },
                 })
 
                 tl.from(
-                    '.teamMember',
+                    '.teamMember1',
+                    {
+                        y: bottomScreen,
+                        ease: "Power4.inOut",
+                        duration: 500,
+                    }
+                )
+
+                tl.from(
+                    '.teamMember2',
+                    {
+                        y: bottomScreen,
+                        ease: "Power4.inOut",
+                        duration: 500,
+                    }
+                )
+
+                tl.from(
+                    '.teamMember3',
+                    {
+                        y: bottomScreen,
+                        ease: "Power4.inOut",
+                        duration: 500,
+                    }
+                )
+
+                tl.from(
+                    '.teamMember4',
                     {
                         y: bottomScreen,
                         ease: "Power4.inOut",
@@ -111,3 +135,23 @@
         ctx.revert(); // <- Easy Cleanup!
     });
 </script>
+
+<style>
+    .blink{
+        animation: blinking;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes blinking {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+</style>
