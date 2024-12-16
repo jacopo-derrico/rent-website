@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-36 lg:w-2/3 mx-auto">
+    <div id="faq" class="mt-36 mx-3 md:mx-8 lg:w-2/3 lg:mx-auto">
         <h1 class="text-center text-3xl font-semibold">
             Frequently Asked Questions
         </h1>
@@ -63,5 +63,9 @@
     }
     .el-collapse .el-collapse-item:last-child .el-collapse-item__header{
         border-bottom: 0px;
+    }
+
+    #faq {
+        min-height: calc(100vh - 300px);
     }
 </style>
