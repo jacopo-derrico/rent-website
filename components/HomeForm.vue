@@ -1,7 +1,7 @@
 <template>
-    <div id="contact-form" class="w-2/3 mx-auto my-20">
+    <div id="contact-form" class="px-3 lg:w-2/3 mx-auto my-20">
         <h6 class="text-3xl font-medium text-center mb-3">Become an Early Adopter</h6>
-        <p class="text-center text-lg px-20 mb-6">Be part of a community-driven startup. Your voice matters—help shape
+        <p class="text-center text-lg md:px-20 mb-6">Be part of a community-driven startup. Your voice matters—help shape
             the app
             everyone wants!</p>
         <form action="POST" novalidate @submit="onSubmit">
