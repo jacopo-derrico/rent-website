@@ -14,7 +14,12 @@
         ogDescription: 'Rent your vehicle while you are not using it or rent one when you need it the most. From bikes to cars, rent anything!',
         ogImage: 'https://rent-website.netlify.app/og_image.png',
         ogUrl: 'https://rent-website.netlify.app',
-        ogType: 'website'
+        ogType: 'website',
+        ogSiteName: 'Omni Rent',
+        twitterCard: 'summary_large_image',
+        twitterTitle: 'Omni Rent | Rent any vehicle, from bikes to cars',
+        twitterDescription: 'Rent your vehicle while you are not using it or rent one when you need it the most. From bikes to cars, rent anything!',
+        twitterImage: 'https://rent-website.netlify.app/og_image.png'
     })
     // useHead({
     //     title: 'Omni Rent | Rent any vehicle, from bikes to cars',
