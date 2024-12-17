@@ -16,7 +16,7 @@
     //     ogImage: '/public/og_image.png',
     //     twitterCard: 'summary_large_image',
     // })
-    useHead({
+    definePageMeta({
         title: 'Omni Rent | Rent any vehicle, from bikes to cars',
         meta: [
             { name: 'description', content: 'Rent your vehicle while you are not using it or rent one when you need it the most. From bikes to cars, rent anything!' },
