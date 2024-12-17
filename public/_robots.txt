@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.omnirent.io/sitemap.xml
+sitemap:https://www.omnirent.io/sitemap.xml
