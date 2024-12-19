@@ -2,7 +2,7 @@
     <div class="bg-[#0174BE] text-center text-white pt-8">
         <div>
             <div class="flex justify-center gap-4 mt-4 w-full">
-                <IconsGithub :width="'20'" :fillColor="'#fff'"/>
+                <IconsTwitter :width="'20'" :fillColor="'#fff'"/>
                 <IconsLinkedin :width="'20'" :fillColor="'#fff'"/>
                 <IconsInsta :width="'20'" :fillColor="'#fff'"/>
             </div>
