@@ -7,13 +7,13 @@
             </h2>
         </div>
         <div id="comments" class="w-full ps-3 lg:w-2/3 lg:ps-14">
-            <el-carousel direction="vertical" type="card" :autoplay="true" trigger="click">
+            <el-carousel direction="vertical" type="card" :autoplay="true" trigger="hover">
                 <el-carousel-item v-for="slide in list" :key="slide.title" class="flex items-center pe-14">
                     <div class="left-borders rounded-s-md"></div>
-                    <div class="flex w-full h-full items-center border-2 border-s-0 pe-4 rounded-r-md border-slate-200 bg-white">
-                        <div class="mx-4">
+                    <div class="flex w-full h-full items-center border-2 border-s-0 p-4 rounded-r-md border-slate-200 bg-white">
+                        <!-- <div class="mx-4">
                             <div class="rounded-full bg-slate-300 w-[70px] h-[70px] lg:w-[100px] lg:h-[100px]"></div>
-                        </div>
+                        </div> -->
                         <div class="relative w-full">
                             <h6 class="text-2xl mb-3">{{ slide.title }}</h6>
                             <svg class="absolute top-2 right-0 w-[35px]" width="43" height="34" viewBox="0 0 43 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,21 +31,21 @@
 <script setup>
     const list = [
         {
-            title: 'titolo1',
-            descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla dui. Vivamus efficitur eros non ex euismod ullamcorper. Morbi ornare libero et sem faucibus.'
+            title: 'Lourine Immesout',
+            descr: 'Hi, I’m Lourine, and I work in wealth management. I’ve been living in Milan for two years. I mainly use buses and the metro to get around, but overcrowding and delays often disrupt my daily life. OMNI is a revolutionary idea that could give me the flexibility to choose transportation based on my needs, making my time more efficient and even enjoyable.'
         },
         {
-            title: 'titolo2',
-            descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla dui. Vivamus efficitur eros non ex euismod ullamcorper. Morbi ornare libero et sem faucibus.'
+            title: 'Massimo Pozzo',
+            descr: 'Hi, I’m Massimo, a psychologist in Turin. I rely on my car for transportation, which is convenient but comes with high costs. OMNI could not only give me access to a variety of vehicles but also allow me to offset the expenses of owning a car by making it profitable through their platform.'
         },
         {
-            title: 'titolo3',
-            descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla dui. Vivamus efficitur eros non ex euismod ullamcorper. Morbi ornare libero et sem faucibus.'
+            title: 'Eleonora Merlino',
+            descr: 'Hi, I’m Eleonora, a barista in Turin. I use buses to commute, but delays often make me rush to work, starting my day on the wrong foot. I’m confident OMNI can bring back the reliability and peace of mind I’ve lost with public transportation. Its diverse range of vehicles could improve my efficiency and even offer exciting new commuting options.'
         },
-        {
-            title: 'titolo4',
-            descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla dui. Vivamus efficitur eros non ex euismod ullamcorper. Morbi ornare libero et sem faucibus.'
-        }
+        // {
+        //     title: 'titolo4',
+        //     descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla dui. Vivamus efficitur eros non ex euismod ullamcorper. Morbi ornare libero et sem faucibus.'
+        // }
     ]
 </script>
 
