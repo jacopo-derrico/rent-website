@@ -12,11 +12,11 @@
                 <div class="mt-14 flex flex-col items-center md:flex-row w-full justify-center gap-4">
                     <NuxtLink
                         class="bg-[#FFC436] text-black hover:bg-[#0174BE] hover:text-white py-3 px-5 rounded-xl cursor-pointer"
-                        to="/">
+                        to="/#contact-form">
                         Join as an Early adopter
                     </NuxtLink>
                     <NuxtLink
-                        class="bg-[#0174BE] hover:bg-[#FFC436] hover:text-white py-3 px-5 rounded-xl cursor-pointer"
+                        class="bg-[#0174BE] hover:bg-[#FFC436] hover:text-white py-3 px-5 rounded-xl cursor-pointer disabled"
                         to="/">
                         Watch the pitch deck
                     </NuxtLink>
