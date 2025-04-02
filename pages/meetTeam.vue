@@ -18,8 +18,8 @@
                         <img src="" alt="">
                     </figure>
                     <div class="absolute top-1/3 -right-32">
-                        <h3 class="font-bold text-2xl text-[#0174BE]">Name surname</h3>
-                        <h6 class="font-medium text-lg">Role</h6>
+                        <h3 class="font-bold text-2xl text-[#0174BE]">Gabriele Main</h3>
+                        <h6 class="font-medium text-lg">Founder</h6>
                         <div class="bg-[#FFC436] h-[2px] w-[65px]"></div>
                     </div>
                 </div>
@@ -30,8 +30,8 @@
                         <img src="" alt="">
                     </figure>
                     <div class="absolute top-1/3 -right-32">
-                        <h3 class="font-bold text-2xl text-[#0174BE]">Name surname</h3>
-                        <h6 class="font-medium text-lg">Role</h6>
+                        <h3 class="font-bold text-2xl text-[#0174BE]">Jacopo Quattrone</h3>
+                        <h6 class="font-medium text-lg">Commercial Director</h6>
                         <div class="bg-[#FFC436] h-[2px] w-[65px]"></div>
                     </div>
                 </div>
@@ -42,8 +42,8 @@
                         <img src="" alt="">
                     </figure>
                     <div class="absolute top-1/3 -right-32">
-                        <h3 class="font-bold text-2xl text-[#0174BE]">Name surname</h3>
-                        <h6 class="font-medium text-lg">Role</h6>
+                        <h3 class="font-bold text-2xl text-[#0174BE]">Aleandro Guri</h3>
+                        <h6 class="font-medium text-lg">Advisor</h6>
                         <div class="bg-[#FFC436] h-[2px] w-[65px]"></div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                         start: "top top",
                         pin: "#scrollStart",
                         scrub: true,
-                        markers: true,
+                        markers: false,
                         pinSpacing: true
                         // toggleActions: "restart none restart none"
                     },
